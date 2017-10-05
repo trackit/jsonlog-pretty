@@ -1,0 +1,22 @@
+jsonlog-pretty
+==============
+Victor Schubert <victor@trackit.io>
+v1.0.0, 2017-10-05
+
+_jsonlog-pretty_ is a filter to make the output from
+https://github.com/trackit/jsonlog human readable.
+
+Currently it reads from stdin, prints to stdout with ANSI colors, and does not
+accept configuration of any kind. Just pipe your JSON logs through it.
+
+== Example
+
+----
+[ INFO] 2017-10-05T23:45:45+02:00 Info message.
+[ERROR] 2017-10-05T23:45:46+02:00 Error message.
+     D  code: 502
+        reason: Too many requests.
+[ WARN] 2017-10-05T23:45:46+02:00 Warning message.
+     D  current: 92
+        maximum: 100
+----
