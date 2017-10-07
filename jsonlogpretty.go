@@ -38,6 +38,7 @@ func main() {
 
 func readMessages(r io.Reader, o chan<- message) {
 	d := json.NewDecoder(r)
+	d.UseNumber()
 	defer close(o)
 
 	for true {
